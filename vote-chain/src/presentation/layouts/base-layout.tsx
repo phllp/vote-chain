@@ -1,21 +1,45 @@
 import { Outlet, Link } from "react-router-dom";
+import { Github } from "lucide-react";
 
 const BaseLayout = () => {
   return (
     <div className="h-full flex w-full min-h-[100svh] bg-blue-50">
-      <aside className="min-h-full w-72 flex flex-col items-center p-4 text-white  bg-blue-900 ">
-        <h1 className="text-2xl font-bold mb-10 mt-5">Vote Chain</h1>
-        <nav className="flex flex-col h-full gap-4 items-center">
-          <Link to="/" className="hover:underline">
-            Home
-          </Link>
-          <Link to="/vote" className="hover:underline">
-            Vote
-          </Link>
-          <Link to="/candidates" className="hover:underline">
-            Candidates
-          </Link>
-        </nav>
+      <aside className="min-h-full w-72 flex flex-col items-center justify-between text-white  bg-blue-900 ">
+        <div className="w-full flex flex-col items-center">
+          <h1 className="text-4xl font-bold mb-12 mt-8 cursor-default">
+            Vote Chain
+          </h1>
+          <nav className="flex flex-col h-full  items-center text-xl w-full">
+            <Link
+              to="/"
+              className="hover:bg-blue-800 w-full flex items-center justify-center py-4"
+            >
+              <p>Home</p>
+            </Link>
+            <Link
+              to="/vote"
+              className="hover:bg-blue-800 w-full flex items-center justify-center py-4"
+            >
+              Vote
+            </Link>
+            <Link
+              to="/candidates"
+              className="hover:bg-blue-800 w-full flex items-center justify-center py-4"
+            >
+              Candidates
+            </Link>
+          </nav>
+        </div>
+        <div className="flex flex-col items-center">
+          <div className="bg-blue-800 rounded-full w-fit h-fit p-2 mb-4 hover:bg-blue-600">
+            <Link to="https://github.com/phllp/vote-chain" target="blank">
+              <Github />
+            </Link>
+          </div>
+          <p className=" mb-8 cursor-default">
+            &copy; {new Date().getFullYear()} Vote Chain
+          </p>
+        </div>
       </aside>
 
       {/* Conteúdo principal */}
