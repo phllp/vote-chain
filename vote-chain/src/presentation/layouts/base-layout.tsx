@@ -6,9 +6,12 @@ const BaseLayout = () => {
     <div className="h-full flex w-full min-h-[100svh] bg-blue-50">
       <aside className="min-h-full w-72 flex flex-col items-center justify-between text-white  bg-blue-900 ">
         <div className="w-full flex flex-col items-center">
-          <h1 className="text-4xl font-bold mb-12 mt-8 cursor-default">
-            Vote Chain
-          </h1>
+          <div className="flex flex-col items-center mt-4">
+            <img src="../../public/logo.png" alt="" className="h-44" />
+            <h1 className="text-4xl font-bold mb-12 cursor-default">
+              Damocratic
+            </h1>
+          </div>
           <nav className="flex flex-col h-full  items-center text-xl w-full">
             <Link
               to="/"
@@ -37,7 +40,7 @@ const BaseLayout = () => {
             </Link>
           </div>
           <p className=" mb-8 cursor-default">
-            &copy; {new Date().getFullYear()} Vote Chain
+            &copy; {new Date().getFullYear()} Damocratic
           </p>
         </div>
       </aside>
