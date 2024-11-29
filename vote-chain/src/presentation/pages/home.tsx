@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Candidate } from "../../core/entities/candidate";
 import axiosInstance from "../../external/axios";
 import { Vote } from "../../core/entities/vote";
-import ChartVotesByCandidate from "../components/home/BarChart";
+import ChartVotesByCandidate from "../components/home/chart-votes-by-candidate";
+import ChartVotesByParty from "../components/home/chart-votes-by-party";
 
 const Home = () => {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
@@ -43,14 +44,9 @@ const Home = () => {
         <p className="text-lg ">Total Votes: {votes.length}</p>
       </div>
       <div className="flex gap-4 grow">
-        <div className="mb-4 bg-gray-50 rounded-lg shadow-lg grow">
-          {votes.length > 0 ? (
-            <ChartVotesByCandidate votes={votes} />
-          ) : (
-            <div>
-              <h2 className="text-xl font-semibold mb-4">No votes yet</h2>
-            </div>
-          )}
+        <div className="mb-4 flex gap-4 w-full">
+          <ChartVotesByCandidate votes={votes} />
+          <ChartVotesByParty votes={votes} />
         </div>
       </div>
     </div>

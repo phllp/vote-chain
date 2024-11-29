@@ -4,4 +4,5 @@ export type Vote = {
   createdAt: string;
   idCandidate: string;
   candidateName?: string;
+  candidateParty?: string;
 };
