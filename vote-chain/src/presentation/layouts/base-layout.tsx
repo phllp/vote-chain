@@ -31,6 +31,12 @@ const BaseLayout = () => {
             >
               Candidates
             </Link>
+            <Link
+              to="/about"
+              className="hover:bg-blue-800 w-full flex items-center justify-center py-4"
+            >
+              About
+            </Link>
           </nav>
         </div>
         <div className="flex flex-col items-center">
