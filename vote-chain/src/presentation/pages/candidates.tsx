@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Candidate } from "../../core/entities/candidate";
 import axiosInstance from "../../external/axios";
-import FormDialog from "../components/candidate/cadidate-dialog";
-import CandidateDeleteDialog from "../components/candidate/cadidate-delete-dialog";
+import FormDialog from "../components/candidate/candidate-dialog";
+import CandidateDeleteDialog from "../components/candidate/candidate-delete-dialog";
 
 const Candidates = () => {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
@@ -106,9 +106,11 @@ const Candidates = () => {
             </tbody>
           </table>
         ) : (
-          <p className="text-gray-500 text-center mt-4">
-            No cadidates registered yet.
-          </p>
+          <div className="mb-4 bg-gray-50 p-4  rounded-lg shadow-lg">
+            <p className="text-gray-500 text-center ">
+              No cadidates registered yet.
+            </p>
+          </div>
         )}
       </div>
     </div>
