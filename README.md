@@ -43,9 +43,13 @@ cd ./backend
 
 Navigate to the network folder with and execute the script `setupStuff.sh`:
 
+**Important:** make sure that docker is installed and running, if it's innactive, start it with `sudo service docker start` or a similar command
+
 ```
 cd ./test-network
 sudo sh ./setupStuff.sh
+export PATH=${PWD}/../bin:$PATH
+export FABRIC_CFG_PATH=$PWD/../config/
 ```
 
 This script should perform all the necessary actions to set the network properly and get it running, if it doesn't work, you can try two different aproaches:
